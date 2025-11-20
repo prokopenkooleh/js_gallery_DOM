@@ -6,8 +6,9 @@ const images = document.getElementById('thumbs');
 images.addEventListener('click', (ev) => {
   ev.preventDefault();
 
-  const img = ev.target.closest('.list-item a img');
-  const srcValue = img.getAttribute('src');
+  const link = ev.target.closest('a');
+  const image = link.querySelector('img');
+  const srcValue = image.getAttribute('src');
 
   mainImg.setAttribute('src', srcValue);
 });
