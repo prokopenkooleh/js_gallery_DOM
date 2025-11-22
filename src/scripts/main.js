@@ -7,6 +7,11 @@ images.addEventListener('click', (ev) => {
   ev.preventDefault();
 
   const link = ev.target.closest('a');
+
+  if (!link) {
+    return;
+  }
+
   const image = link.querySelector('img');
   const srcValue = image.getAttribute('src');
 
